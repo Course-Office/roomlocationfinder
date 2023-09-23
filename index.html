@@ -39,15 +39,15 @@
 
 <script>
     function findRoom(input) {
-        if ("A" <= input && input <= "ED") return 1;
-        else if ("EF" <= input && input <= "LED") return 2;
-        else if ("LEV" <= input && input <= "LOD") return 3;
-        else if ("LOP" <= input && input <= "MOS") return 4;
-        else if ("MOT" <= input && input <= "RA") return 5;
-        else if ("RE" <= input && input <= "SR") return 6;
-        else if ("ST" <= input && input <= "V") return 7;
-        else if ("W" <= input && input <= "YU") return 8;
-        else if ("YUA" <= input && input <= "ZOU") return 9;
+        if ("A" <= input && input <= "EDZZ") return 1;
+        else if ("EFZZ" <= input && input <= "LEDZ") return 2;
+        else if ("LEVZ" <= input && input <= "LODZ") return 3;
+        else if ("LOPZ" <= input && input <= "MOSZ") return 4;
+        else if ("MOTZ" <= input && input <= "RAZZ") return 5;
+        else if ("REZZ" <= input && input <= "SRIZ") return 6;
+        else if ("STZZ" <= input && input <= "VZZZ") return 7;
+        else if ("WZZZ" <= input && input <= "YU") return 8;
+        else if ("YUAZ" <= input && input <= "ZZZZ") return 9;
         else return "Invalid Input";
     }
 
@@ -60,15 +60,19 @@
         }
 
         // If input falls in overlapping range, ask for a third letter.
-        if (["EF", "LE", "LO", "MO", "Yu"].includes(input)) {
+        if (["EF", "LE", "LO", "MO"].includes(input)) {
             if (input.length < 3) {
                 document.getElementById("output").innerText = "Please enter a third letter for a precise room assignment.";
                 return;
             }
         }
 
+	if (input === "YU") {
+		alert("Is your Last Name begins with 'YU' (e.g., YUABC), please enter the first 3 letters to find room.")
+	}
+	    
         var room = findRoom(input);
-        document.getElementById("output").innerText = "You are in Room " + room;
+        document.getElementById("output").innerText = "You are in Room " + # room;
     }
 </script>
 
