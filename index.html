@@ -27,14 +27,11 @@
 <body>
 
 <p> This page is to be used as an aid, but as it may produce error, please do not rely on it. <br>
-
 <p> If you have questions about your room assignment, please email the Course Office. <br>
-
-<p> This is a public webpage that is built to help you. Do not enter sensitive information. <pr>
+<p> This is a public webpage that is built to help you. Do not enter sensitive information. <br>
 
 <p> Enter the first 2-3 letters of your last name in the box below; if you are not sure, you can also enter your full last name. <br>
-
-<p> Note if your last name is just YU, you're in room # 8; otherwise, please enter the first 3 letters in the box below to check.<br>
+<p> Note if your last name is just two letters of YU, you are in Room # 8; if your last name begins with Yu, you are in Room # 9. </p>
 
 <input type="text" id="lastNameInput">
 <button onclick="displayRoom()">Find Room</button>
@@ -63,7 +60,7 @@
         }
 
         // If input falls in overlapping range, ask for a third letter.
-        if (["EF", "LE", "LO", "MO"].includes(input)) {
+        if (["EF", "LE", "LO", "MO", "Yu"].includes(input)) {
             if (input.length < 3) {
                 document.getElementById("output").innerText = "Please enter a third letter for a precise room assignment.";
                 return;
