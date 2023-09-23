@@ -37,13 +37,13 @@
 
 <script>
     function findRoom(input) {
-        if ("A" <= input && input <= "EDZZ") return 1;
-        else if ("EF" <= input && input <= "LEDZ") return 2;
-        else if ("LEV" <= input && input <= "LODZ") return 3;
-        else if ("LOP" <= input && input <= "MOSZ") return 4;
-        else if ("MOT" <= input && input <= "RAZZ") return 5;
-        else if ("RE" <= input && input <= "SRIZ") return 6;
-        else if ("ST" <= input && input <= "VZZZ") return 7;
+        if ("A" <= input && input <= "EKZZ") return 1;
+        else if ("EL" <= input && input <= "LESZ") return 2;
+        else if ("LEU" <= input && input <= "LIZZ") return 3;
+        else if ("LO" <= input && input <= "MONZ") return 4;
+        else if ("MOO" <= input && input <= "RASZ") return 5;
+        else if ("RAV" <= input && input <= "SMZZ") return 6;
+        else if ("SO" <= input && input <= "VZZZ") return 7;
         else if ("W" <= input && input <= "YU") return 8;
         else if ("YUA" <= input && input <= "ZZZZZZZ") return 9;
         else return "Invalid Input";
@@ -57,7 +57,7 @@
             return;
         }
 
-        if (["EF", "LE", "LO", "MO"].includes(input)) {
+        if (["LE", "MO", "RA"].includes(input)) {
             if (input.length < 3) {
                 document.getElementById("output").innerText = "Please enter a third letter for a precise room assignment.";
                 return;
