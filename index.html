@@ -26,10 +26,11 @@
 <body>
 
 <p> DISCLAIMER: This public webpage is built to help you and it may produce error. <br>
-<p> Note that nothing you enter here is recorded. <br>
+<p> Nothing you enter here is recorded. Refer to the Room Assignment page for Room Numbers. <br>
 
 <p> Enter the first 2-3 letters of your last name in the box below. <br>
 <p> If you are not sure, you can also enter your full last name OR name(s) excluding your surname. <br>
+<p> - BIO230 Office <br>
 
 <input type="text" id="lastNameInput">
 <button onclick="displayRoom()">Find Room</button>
@@ -62,13 +63,9 @@
                 return;
             }
         }
-
-	if (input === "") {
-		alert("Refer to the Room Assignment page for Room numbers.");
-	}
 	    
         var room = findRoom(input);
-        document.getElementById("output").innerText = "You are in Room " + room;
+        document.getElementById("output").innerText = "You are in Room " + room + "." + "Good luck!";
     }
 
 	document.addEventListener('DOMContentLoaded', function() {
