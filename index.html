@@ -49,15 +49,6 @@
 	else if ("SA" <= input && input <= "SU") return 9;
 	else if ("SUA" <= input && input <= "ZZZZ") return 9
         else return "Invalid Input";
-    }
-
-    function displayRoom() {
-        var input = document.getElementById("lastNameInput").value.toUpperCase();
-        
-        if (input.length === 0) {
-            document.getElementById("output").innerText = "Please enter at least 2 letters.";
-            return;
-        }
 
 	if (["GO", "JA"].includes(input)) {
             if (input.length < 3) {
@@ -69,6 +60,15 @@
 	if (input === "SU") {
 		alert("If your Last Name IS just SU, you are in Room 9; if your Last Name begins with 'YU' (e.g., YUABC), enter the first 3 letters of your last name.");
 	}
+    }
+
+    function displayRoom() {
+        var input = document.getElementById("lastNameInput").value.toUpperCase();
+        
+        if (input.length === 0) {
+            document.getElementById("output").innerText = "Please enter at least 2 letters.";
+            return;
+        }
 	    
         var room = findRoom(input);
         document.getElementById("output").innerText = "You are in Room " + room + ". " + "Good luck!";
