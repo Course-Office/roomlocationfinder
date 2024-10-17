@@ -56,7 +56,7 @@
 	var room;
 	// Handle exact "SU" case first
 	 if (input === "SU") {
-		 alert("If your Last Name is exactly SU, you are in Room 9; if your Last Name begins with 'SU' (e.g., SUABC), enter the first 3 letters of your last name.");
+		 alert("If your Last Name is exactly SU, you are in Room 9; if your Last Name begins with 'SU' (e.g., SUABC), you are in Room 10.");
 		 room = 9; // Assign Room 9 for exact SU case
 	}
     
@@ -66,10 +66,10 @@
         else if ("HI" <= input && input <= "JAKZ") room = 4;
         else if ("JAM" <= input && input <= "KAZZ") room = 5;
         else if ("KE" <= input && input <= "NAZZ") room = 6;
-        else if ("ND" <= input && input <= "OUZZ") room = 7;
-        else if ("OY" <= input && input <= "RYZZ") room = 8;
+        else if ("ND" <= input && input <= "OTZZ") room = 7;
+        else if ("OU" <= input && input <= "RYZZ") room = 8;
 	else if ("SA" <= input && input <= "SUZ") room = 9;
-	else if ("SUA" <= input && input <= "ZZZZ") room = 9
+	else if ("SUA" <= input && input <= "ZZZZ") room = 10
         else room = "Invalid Input";
 	    
         document.getElementById("output").innerText = "You are in Room " + room + ". " + "Good luck!";
